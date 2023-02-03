@@ -900,13 +900,34 @@ ul {
 .modal-form-check-desc {
   display: flex;
   align-items: center;
+
   margin-bottom: 24px;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: var(--modal-form-check-desc-color);
 }
-.modal-form-check-desc::before {
+.modal-form-check-desc span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  cursor: pointer;
+  fill: transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-check:checked + .modal-form-check-desc span {
+  background-color: var(--hover-focus-color);
+  border: none;
+  fill: #f4f4fd;
+}
+/* -------- другий спосіб приховування галочки за допомогою  background-image: ----------- */
+/* .modal-form-check-desc::before {
   display: block;
   margin-right: 8px;
   content: "";
@@ -926,7 +947,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px 8px;
-}
+} */
 .modal-form-check:focus + .modal-form-check-desc::before {
   border: 1.25px solid #404bbf;
 }
