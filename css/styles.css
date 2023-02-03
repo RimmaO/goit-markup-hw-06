@@ -866,7 +866,7 @@ ul {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-
+  fill: #2e2f42;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -916,14 +916,16 @@ ul {
   border-radius: 2px;
   cursor: pointer;
 
-  background-image: url(../images/on.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-color: var(--hover-focus-color);
+  border: none;
+  background-image: url(../images/on.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 8px;
 }
 .modal-form-check:focus + .modal-form-check-desc::before {
   border: 1.25px solid #404bbf;
